@@ -1,0 +1,15 @@
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\MortgageCalc.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\MortgageCalc.AssemblyInfoInputs.cache
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\MortgageCalc.AssemblyInfo.cs
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\MortgageCalc.csproj.CoreCompileInputs.cache
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\MortgageCalc.sourcelink.json
+C:\GitHub\mssa5demo\MortgageCalc\bin\Debug\net8.0\MortgageCalc.exe
+C:\GitHub\mssa5demo\MortgageCalc\bin\Debug\net8.0\MortgageCalc.deps.json
+C:\GitHub\mssa5demo\MortgageCalc\bin\Debug\net8.0\MortgageCalc.runtimeconfig.json
+C:\GitHub\mssa5demo\MortgageCalc\bin\Debug\net8.0\MortgageCalc.dll
+C:\GitHub\mssa5demo\MortgageCalc\bin\Debug\net8.0\MortgageCalc.pdb
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\MortgageCalc.dll
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\refint\MortgageCalc.dll
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\MortgageCalc.pdb
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\MortgageCalc.genruntimeconfig.cache
+C:\GitHub\mssa5demo\MortgageCalc\obj\Debug\net8.0\ref\MortgageCalc.dll
