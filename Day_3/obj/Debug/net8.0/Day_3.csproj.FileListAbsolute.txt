@@ -1,0 +1,15 @@
+C:\GitHub\mssa5demo\Day_3\bin\Debug\net8.0\Day_3.exe
+C:\GitHub\mssa5demo\Day_3\bin\Debug\net8.0\Day_3.deps.json
+C:\GitHub\mssa5demo\Day_3\bin\Debug\net8.0\Day_3.runtimeconfig.json
+C:\GitHub\mssa5demo\Day_3\bin\Debug\net8.0\Day_3.dll
+C:\GitHub\mssa5demo\Day_3\bin\Debug\net8.0\Day_3.pdb
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\Day_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\Day_3.AssemblyInfoInputs.cache
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\Day_3.AssemblyInfo.cs
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\Day_3.csproj.CoreCompileInputs.cache
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\Day_3.sourcelink.json
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\Day_3.dll
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\refint\Day_3.dll
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\Day_3.pdb
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\Day_3.genruntimeconfig.cache
+C:\GitHub\mssa5demo\Day_3\obj\Debug\net8.0\ref\Day_3.dll
