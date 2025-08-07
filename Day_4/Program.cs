@@ -103,51 +103,211 @@ class Program
         //     return true;
         // }
 
-        TellFortune();
+        // TellFortune();
 
-        void TellFortune()
+        // void TellFortune()
+        // {
+        //     string[] text = { "You have much to", "Today is a day to", "Whatever work you do", "This is an ideal time to" };
+        //     string[] good = { "look forward to.", "try new things!", "is likely to succeed.", "accomplish your dreams!" };
+        //     string[] bad = { "fear.", "avoid major decisions.", "may have unexpected outcomes.", "re-evaluate your life." };
+        //     string[] neutral = { "appreciate.", "enjoy time with friends.", "should align with your values.", "get in tune with nature." };
+        //     string[]? fortunes = null;
+
+        //     //assign random variable to good, bad, and neutral fortune
+        //     Random random = new Random();
+        //     int randomFortune = random.Next(3);
+        //     switch (randomFortune)
+        //     {
+        //         case 0:
+        //             fortunes = bad;
+
+        //             break;
+        //         case 1:
+        //             fortunes = neutral;
+        //             break;
+        //         case 2:
+        //             fortunes = good;
+        //             break;
+        //     }
+
+        //     //combine text with space with either good, bad, or neutral
+        //     System.Console.WriteLine("A fortune teller whispers the following words:");
+        //     for (int i = 0; i < 3; i++)
+        //     {
+        //         System.Console.Write($"{text[i]} {fortunes[i]} ");
+        //     }
+        // foreach (string sentence in text)
+        // {
+        //     System.Console.WriteLine($"{sentence}");
+        // }
+        // foreach (string fortune in fortunes)
+        // {
+        //     System.Console.WriteLine($"{fortune}");
+        // }
+        // }
+
+        // Random random = new Random();
+        // static int luck;
+        // string[] text = { "You have much to", "Today is a day to", "Whatever work you do", "This is an ideal time to" };
+        // string[] good = { "look forward to.", "try new things!", "is likely to succeed.", "accomplish your dreams!" };
+        // string[] bad = { "fear.", "avoid major decisions.", "may have unexpected outcomes.", "re-evaluate your life." };
+        // string[] neutral = { "appreciate.", "enjoy time with friends.", "should align with your values.", "get in tune with nature." };
+        // static void Main()
+        // {
+        //     luck = random.Next(1, 4);
+        //     TellFortune();
+
+        // }
+
+        // static void TellFortune()
+        // {
+        //     Console.WriteLine("A fortune teller whispers the following words:");
+        //     string[] fortune = luck switch
+        //     {
+        //         1 => good,
+        //         2 => neutral,
+        //         _ => bad
+        //     };
+        //     for (int i = 0; i < 4; i++)
+        //     {
+        //         Console.Write($"{text[i]} {fortune[i]} ");
+        //     }
+        // }
+
+        string[,] ourAnimals = new string[4, 5];
+
+        // Sample data: [0] = ID, [1] = Species, [2] = Nickname, [3] = Physical Description, [4] = Personality
+        ourAnimals[0, 0] = "d1"; ourAnimals[0, 1] = "dog"; ourAnimals[0, 2] = "lola";
+        ourAnimals[0, 3] = "medium sized cream colored female golden retriever weighing about 45 pounds. housebroken.";
+        ourAnimals[0, 4] = "loves to have her belly rubbed and likes to chase her tail. gives lots of kisses.";
+
+        ourAnimals[1, 0] = "d2"; ourAnimals[1, 1] = "dog"; ourAnimals[1, 2] = "gus";
+        ourAnimals[1, 3] = "large reddish-brown male golden retriever weighing about 85 pounds. housebroken.";
+        ourAnimals[1, 4] = "loves to have his ears rubbed when he greets you at the door, or at any time! loves to lean-in and give doggy hugs.";
+
+        ourAnimals[2, 0] = "c1"; ourAnimals[2, 1] = "cat"; ourAnimals[2, 2] = "snowball";
+        ourAnimals[2, 3] = "small white female weighing about 8 pounds. uses litter box.";
+        ourAnimals[2, 4] = "friendly and playful, likes to climb curtains and sit on laps.";
+
+        ourAnimals[3, 0] = "c2"; ourAnimals[3, 1] = "cat"; ourAnimals[3, 2] = "lucy";
+        ourAnimals[3, 3] = "medium sized gray tabby female weighing about 12 pounds. uses litter box.";
+        ourAnimals[3, 4] = "quiet and affectionate, likes to nap in sunny spots and purrs loudly.";
+
+        bool exitRequested = false;
+
+        while (!exitRequested)
         {
-            string[] text = { "You have much to", "Today is a day to", "Whatever work you do", "This is an ideal time to" };
-            string[] good = { "look forward to.", "try new things!", "is likely to succeed.", "accomplish your dreams!" };
-            string[] bad = { "fear.", "avoid major decisions.", "may have unexpected outcomes.", "re-evaluate your life." };
-            string[] neutral = { "appreciate.", "enjoy time with friends.", "should align with your values.", "get in tune with nature." };
-            string[]? fortunes = null;
+            Console.Clear();
+            Console.WriteLine("Welcome to the Contoso PetFriends app. Your main menu options are:");
+            Console.WriteLine("1. List all of our current pet information");
+            Console.WriteLine("2. Display all dogs with a specified characteristic");
+            Console.Write("Enter your selection number (or type Exit to exit the program): ");
+            string? userSelection = Console.ReadLine()?.ToLower();
 
-            //assign random variable to good, bad, and neutral fortune
-            Random random = new Random();
-            int randomFortune = random.Next(3);
-            switch (randomFortune)
+            switch (userSelection)
             {
-                case 0:
-                    fortunes = bad;
+                case "1":
+                    Console.WriteLine("\nCurrent pet information:");
+                    for (int i = 0; i < ourAnimals.GetLength(0); i++)
+                    {
+                        Console.WriteLine($"ID #: {ourAnimals[i, 0]}");
+                        Console.WriteLine($"Species: {ourAnimals[i, 1]}");
+                        Console.WriteLine($"Nickname: {ourAnimals[i, 2]}");
+                        Console.WriteLine($"Physical description: {ourAnimals[i, 3]}");
+                        Console.WriteLine($"Personality: {ourAnimals[i, 4]}\n");
+                    }
+                    Console.WriteLine("Press the Enter key to continue");
+                    Console.ReadLine();
+                    break;
 
+                case "2":
+                    string[] searchTerms = SearchToArray();
+                    bool dogMatchFound = false;
+
+                    for (int i = 0; i < ourAnimals.GetLength(0); i++)
+                    {
+                        if (ourAnimals[i, 0].ToLower() == "dog")
+                        {
+                            string dogName = ourAnimals[i, 1];
+                            string description = (ourAnimals[i, 2] + " " + ourAnimals[i, 3]).ToLower();
+                            bool currentDogMatched = false;
+
+                            foreach (string term in searchTerms)
+                            {
+                                ShowSearchAnimation(dogName, term);
+
+                                if (description.Contains(term))
+                                {
+                                    Console.WriteLine($"Our dog {dogName} matches your search for '{term}'!");
+                                    currentDogMatched = true;
+                                    dogMatchFound = true;
+                                }
+                            }
+
+                            if (currentDogMatched)
+                            {
+                                Console.WriteLine($"Nickname: {dogName} (ID #: {ourAnimals[i, 4]})");
+                                Console.WriteLine($"Physical description: {ourAnimals[i, 2]}");
+                                Console.WriteLine($"Personality: {ourAnimals[i, 3]}\n");
+                            }
+                        }
+                    }
+
+                    if (!dogMatchFound)
+                    {
+                        Console.WriteLine($"None of our dogs are a match for: {string.Join(", ", searchTerms)}");
+                    }
+
+                    Console.WriteLine("Press the Enter key to continue");
+                    Console.ReadLine();
                     break;
-                case 1:
-                    fortunes = neutral;
+
+                case "exit":
+                    exitRequested = true;
                     break;
-                case 2:
-                    fortunes = good;
+
+                default:
+                    Console.WriteLine("Invalid selection. Please enter 1, 2, or Exit.");
+                    Console.WriteLine("Press the Enter key to continue");
+                    Console.ReadLine();
                     break;
             }
-
-            //combine text with space with either good, bad, or neutral
-            System.Console.WriteLine("A fortune teller whispers the following words:");
-            for (int i = 0; i < 3; i++)
-            {
-                System.Console.Write($"{text[i]} {fortunes[i]} ");
-            }
-            // foreach (string sentence in text)
-            // {
-            //     System.Console.WriteLine($"{sentence}");
-            // }
-            // foreach (string fortune in fortunes)
-            // {
-            //     System.Console.WriteLine($"{fortune}");
-            // }
         }
+
+
     }
+
+
+    public static string[] SearchToArray()
+    {
+        Console.WriteLine("\nEnter one desired dog characteristic to search for:");
+        string[]? searchTerm = Console.ReadLine()?.ToLower().Split(",");
+
+        if (searchTerm == null)
+            return new string[0];
+
+        for (int i = 0; i < searchTerm?.Length; i++)
+        {
+            searchTerm[i] = searchTerm[i].Trim();
+        }
+        Array.Sort(searchTerm!); //alphabatize
+        return searchTerm!;
+
+    }
+
+    public static void ShowSearchAnimation(string dogName, string term)
+    {
+        string[] searchingIcons = { ".  ", ".. ", "...", "...." };
+        foreach (string icon in searchingIcons)
+        {
+            Console.Write($"\rSearching our dog Nickname: {dogName} for '{term}' {icon}");
+            Thread.Sleep(300);
+        }
+        Console.WriteLine();
+    }
+
+
 }
- 
 
 
 
